@@ -3,16 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "type-check": "tsc --noEmit",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|ts|tsx|md|mdx|json|yml|yaml)\"",
-    "format": "npm run prettier -- --write",
-    "format-check": "npm run prettier -- --check"
-  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -29,5 +19,15 @@
     "prettier": "^3.2.4",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|ts|tsx|md|mdx|json|yml|yaml)\"",
+    "format": "npm run prettier -- --write",
+    "format-check": "npm run prettier -- --check"
   }
 }

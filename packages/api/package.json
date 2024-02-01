@@ -17,7 +17,7 @@
     "typescript": "^5.3.3"
   },
   "scripts": {
-    "dev": "nodemon -e ts  --exec \"yarn run type-check && node ./dist/index.js\"",
+    "dev": "nodemon -e ts  --exec \"yarn run build && node ./dist/index.js\"",
     "build": "tsc",
     "type-check": "tsc --noEmit",
     "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0",
