@@ -13,11 +13,15 @@
     "@typescript-eslint/parser": "^6.14.0",
     "eslint": "^8.55.0",
     "nodemon": "^3.0.3",
+    "prettier": "^3.2.4",
     "typescript": "^5.3.3"
   },
   "scripts": {
     "dev": "nodemon -e ts  --exec \"yarn run build\"",
     "build": "tsc && node ./dist/index.js",
-    "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0"
+    "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|ts|tsx|md|mdx|json|yml|yaml)\"",
+    "format": "npm run prettier -- --write",
+    "check-format": "npm run prettier -- --check"
   }
 }
