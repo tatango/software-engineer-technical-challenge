@@ -1,35 +1,90 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Delete from '@mui/icons-material/Delete'
+import Button from '@mui/joy/Button'
+import Checkbox from '@mui/joy/Checkbox'
+import IconButton from '@mui/joy/IconButton'
+import List from '@mui/joy/List'
+import ListDivider from '@mui/joy/ListDivider'
+import ListItem from '@mui/joy/ListItem'
+import Stack from '@mui/joy/Stack'
+import Typography from '@mui/joy/Typography'
+import { Task } from '@prisma/client'
+import { Fragment, useEffect, useState } from 'react'
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [tasks, setTasks] = useState<Task[]>([])
+
+  // TO-DO: This request is running twice. How to fix that?
+  useEffect(() => {
+    fetch('http://localhost:3000/tasks')
+      .then(res => {
+        return res.json()
+      })
+      .then(data => {
+        // TO-DO: How to guarantee that data is an array of Task?
+        setTasks(data)
+      })
+  }, [])
+
+  const handleCheckboxChange = (
+    changedTask: Task,
+    completedStatus: Task['completed']
+  ) => {
+    // TO-DO: Persist the changes to the backend.
+    setTasks(
+      tasks.map(task =>
+        task.id === changedTask.id
+          ? { ...task, completed: completedStatus }
+          : task
+      )
+    )
+  }
 
   return (
-    <>
-      <div>
-        <a href='https://vitejs.dev' target='_blank'>
-          <img src={viteLogo} className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://react.dev' target='_blank'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className='card'>
-        <button onClick={() => setCount(count => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className='read-the-docs'>
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Stack
+      gap={2}
+      style={{
+        maxWidth: 500,
+        margin: 'auto',
+        alignItems: 'center',
+      }}>
+      <Typography color='primary' level='h1'>
+        Task List
+      </Typography>
+      <List
+        variant='outlined'
+        sx={{
+          borderRadius: 'sm',
+          width: '100%',
+        }}>
+        {tasks.map((task, index) => (
+          <Fragment key={task.id}>
+            {index > 0 && <ListDivider />}
+            <ListItem
+              key={task.id}
+              endAction={
+                <IconButton aria-label='Delete' size='sm' color='danger'>
+                  {/* TO-DO: Implement the delete feature */}
+                  <Delete />
+                </IconButton>
+              }>
+              <Checkbox
+                label={task.title}
+                sx={{
+                  textDecoration: task.completed ? 'line-through' : 'none',
+                }}
+                checked={task.completed}
+                onChange={event =>
+                  handleCheckboxChange(task, event.target.checked)
+                }
+              />
+            </ListItem>
+          </Fragment>
+        ))}
+      </List>
+      <Button fullWidth>
+        {/* TO-DO: Implement the new task feature */}
+        New Task
+      </Button>
+    </Stack>
   )
 }
-
-export default App

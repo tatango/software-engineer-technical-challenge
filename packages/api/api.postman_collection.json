@@ -27,23 +27,6 @@
 					"response": []
 				},
 				{
-					"name": "show",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{URL}}/1",
-							"host": [
-								"{{URL}}"
-							],
-							"path": [
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "create",
 					"request": {
 						"method": "POST",

@@ -1,11 +1,40 @@
-import { faker } from '@faker-js/faker'
 import { PrismaClient, Task } from '@prisma/client'
 
 const prisma = new PrismaClient()
-const N = 10
+
+const tasks: Omit<Task, 'id'>[] = [
+  {
+    title: '[api] Implement the update route',
+    completed: false,
+  },
+  {
+    title: '[ui] Persist the changes to the backend',
+    completed: false,
+  },
+  {
+    title: '[api] Implement the create route',
+    completed: false,
+  },
+
+  {
+    title: '[ui] Implement the new task feature',
+    completed: false,
+  },
+  {
+    title: '[ui] Implement the delete feature',
+    completed: false,
+  },
+  {
+    title: '[ui] This request is running twice. How to fix that?',
+    completed: false,
+  },
+  {
+    title: '[ui] How to guarantee that data is an array of Task?',
+    completed: false,
+  },
+]
 
 async function main() {
-  const tasks = createTasks(N)
   for (const task of tasks) {
     await prisma.task.upsert({
       where: { title: task.title },
@@ -25,10 +54,3 @@ main()
     await prisma.$disconnect()
     process.exit(1)
   })
-
-function createTasks(N): Omit<Task, 'id'>[] {
-  return Array.from({ length: N }, () => ({
-    title: faker.lorem.words(3),
-    completed: faker.datatype.boolean(),
-  }))
-}
