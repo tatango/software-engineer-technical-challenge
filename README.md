@@ -45,3 +45,9 @@ At any moment you can run `turbo <COMMAND>`. The available commands are:
 - `format-check`: checks the code format with Prettier
 - `format`: formats the code with Prettier
 - `migrate`: creates and seeds the database
+
+### Rules
+
+- you need to share your entire screen
+- you are allowed to ask as many questions as you'd like
+- you are allowed to
