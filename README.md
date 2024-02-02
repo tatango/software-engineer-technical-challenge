@@ -1,28 +1,31 @@
 # software-engineering-technical-challenge
 
+## Prerequisites
+
+1. Install `yarn`
+
+    See https://classic.yarnpkg.com/lang/en/docs/install.
+
+2. Install `turbo`
+
+    See https://turbo.build/repo/docs/installing.
+
 ## Getting started
 
-1. Clone the repo
-    ```
-    git clone git@github.com:tatango/software-engineer-technical-challenge.git && cd software-engineer-technical-challenge
-    ```
-1. Install `yarn`
-    ```
-    npm install --global yarn
-    ```
-1. Install `turbo`
-    ```
-    yarn global add turbo
-    ```
 1. Install project dependencies
+
     ```
     yarn
     ```
-1. Create and seed the database
+
+1.  Create and seed the database
+
     ```
     turbo migrate
     ```
-2. Start the development pipeline:
+
+2. Start the development environment:
+
     ```
     turbo dev
     ```
