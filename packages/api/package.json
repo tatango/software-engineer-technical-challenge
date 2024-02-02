@@ -9,6 +9,7 @@
     "joi": "^17.12.1"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.4.0",
     "@types/node": "^20.11.16",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
@@ -27,5 +28,8 @@
     "format": "npm run prettier -- --write",
     "format-check": "npm run prettier -- --check",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|ts|tsx|md|mdx|json|yml|yaml)\""
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
   }
 }
