@@ -20,7 +20,11 @@
     ```
     yarn
     ```
-1. Start the development pipeline:
+1. Create and seed the database
+    ```
+    turbo migrate
+    ```
+2. Start the development pipeline:
     ```
     turbo dev
     ```
