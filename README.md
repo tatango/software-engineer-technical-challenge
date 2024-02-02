@@ -2,8 +2,6 @@
 
 ## Getting started
 
-### Requirements
-
 1. Clone the repo
     ```
     git clone git@github.com:tatango/software-engineer-technical-challenge.git && cd software-engineer-technical-challenge
