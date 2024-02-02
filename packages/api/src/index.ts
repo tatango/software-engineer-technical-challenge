@@ -7,7 +7,7 @@ const prisma = new PrismaClient()
 
 const init = async () => {
   const server: Server = new Server({
-    port: 3000,
+    port: 1984,
     host: 'localhost',
     routes: {
       cors: {

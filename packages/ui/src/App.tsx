@@ -15,7 +15,7 @@ export default function App() {
 
   // TO-DO: This request is running twice. How to fix that?
   useEffect(() => {
-    fetch('http://localhost:3000/tasks')
+    fetch('http://localhost:1984/tasks')
       .then(res => {
         return res.json()
       })
