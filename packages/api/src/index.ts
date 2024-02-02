@@ -14,6 +14,9 @@ const init = async () => {
         origin: ['*'],
       },
     },
+    debug: {
+      request: ['error'],
+    },
   })
 
   /* list */
