@@ -9,6 +9,11 @@ const init = async () => {
   const server: Server = new Server({
     port: 3000,
     host: 'localhost',
+    routes: {
+      cors: {
+        origin: ['*'],
+      },
+    },
   })
 
   /* list */
@@ -17,17 +22,6 @@ const init = async () => {
     path: '/tasks',
     handler: async (request: Request, h: ResponseToolkit) => {
       return await prisma.task.findMany()
-    },
-  })
-
-  /* view */
-  server.route({
-    method: 'GET',
-    path: '/tasks/{id}',
-    handler: async (request: Request, h: ResponseToolkit) => {
-      return await prisma.task.findUnique({
-        where: { id: Number(request.params.id) },
-      })
     },
   })
 
