@@ -46,3 +46,4 @@ At any moment you can run `turbo <COMMAND>`. The available commands are:
 - `lint`: lints the project with ESLint
 - `format-check`: checks the code format with Prettier
 - `format`: formats the code with Prettier
+- `migrate`: creates and seeds the database
