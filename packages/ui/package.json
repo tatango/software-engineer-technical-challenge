@@ -27,7 +27,7 @@
     "vite": "^5.0.8"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "node scripts/start.js",
     "build": "tsc && vite build",
     "type-check": "tsc --noEmit",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
