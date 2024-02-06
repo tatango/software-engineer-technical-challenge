@@ -9,6 +9,11 @@
 2. Install `turbo`
 
     See https://turbo.build/repo/docs/installing.
+    The `npm` method seems to be more consistent.
+
+## Nice to Have
+
+`Postman`, so you can use the collection to interact with the `api`.
 
 ## Getting started
 
