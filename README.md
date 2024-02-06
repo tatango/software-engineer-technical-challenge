@@ -29,6 +29,12 @@
     turbo migrate
     ```
 
+    If needed, you can recreate the database by using:
+
+    ```
+    turbo migrate --force
+    ```
+
 2. Start the development environment:
 
     ```
