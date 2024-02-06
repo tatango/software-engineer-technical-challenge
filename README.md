@@ -29,7 +29,7 @@
     turbo migrate
     ```
 
-    If needed, you can recreate the database by using:
+    If needed, you can recreate the database and re-seed by using:
 
     ```
     turbo migrate --force

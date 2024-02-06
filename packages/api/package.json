@@ -28,7 +28,7 @@
     "format": "npm run prettier -- --write",
     "format-check": "npm run prettier -- --check",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|ts|tsx|md|mdx|json|yml|yaml)\"",
-    "migrate": "prisma migrate dev"
+    "migrate": "prisma migrate reset --force"
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
