@@ -4,28 +4,24 @@ const prisma = new PrismaClient()
 
 const tasks: Omit<Task, 'id'>[] = [
   {
-    title: '[api] Implement the update route',
+    title: 'Implement the update task endpoint',
     completed: false,
   },
   {
-    title: '[ui] Persist the changes to the backend',
+    title: 'Persist the changes to the database',
     completed: false,
   },
   {
-    title: '[api] Implement the create route',
+    title: 'Implement the create task endpoint',
     completed: false,
   },
 
   {
-    title: '[ui] Implement the new task feature',
+    title: 'Implement the new task feature',
     completed: false,
   },
   {
-    title: '[ui] Implement the delete feature',
-    completed: false,
-  },
-  {
-    title: '[ui] How to guarantee that data is an array of Task?',
+    title: 'How to guarantee that data is an array of Task?',
     completed: false,
   },
 ]

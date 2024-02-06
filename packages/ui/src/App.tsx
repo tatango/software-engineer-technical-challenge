@@ -25,7 +25,7 @@ export default function App() {
   }, [])
 
   const handleCheckboxChange = (task: Task, completed: Task['completed']) => {
-    // TO-DO: Persist the changes to the backend.
+    // TO-DO: Persist the changes to the database
     setTasks(tasks.map(t => (t.id === task.id ? { ...t, completed } : t)))
   }
 

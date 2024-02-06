@@ -44,7 +44,7 @@ const init = async () => {
     method: ['POST'],
     path: '/tasks',
     handler: async (request: Request, h: ResponseToolkit) => {
-      // TO-DO: Implement the create route
+      // TO-DO: Implement the create task endpoint
       throw new Error('Not implemented')
     },
   })
@@ -54,7 +54,7 @@ const init = async () => {
     method: ['PUT', 'PATCH'],
     path: '/tasks/{id}',
     handler: async (request: Request, h: ResponseToolkit) => {
-      // TO-DO: Implement the update route
+      // TO-DO: Implement the update task endpoint
       throw new Error('Not implemented')
     },
   })
