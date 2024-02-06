@@ -13,7 +13,6 @@ import { Fragment, useEffect, useState } from 'react'
 export default function App() {
   const [tasks, setTasks] = useState<Task[]>([])
 
-  // TO-DO: This request is running twice. How to fix that?
   useEffect(() => {
     fetch('http://localhost:1984/tasks')
       .then(res => {
@@ -25,18 +24,21 @@ export default function App() {
       })
   }, [])
 
-  const handleCheckboxChange = (
-    changedTask: Task,
-    completedStatus: Task['completed']
-  ) => {
+  const handleCheckboxChange = (task: Task, completed: Task['completed']) => {
     // TO-DO: Persist the changes to the backend.
-    setTasks(
-      tasks.map(task =>
-        task.id === changedTask.id
-          ? { ...task, completed: completedStatus }
-          : task
-      )
-    )
+    setTasks(tasks.map(t => (t.id === task.id ? { ...t, completed } : t)))
+  }
+
+  const handleDeleteTask = (task: Task) => {
+    fetch(`http://localhost:1984/tasks/${task.id}`, {
+      method: 'delete',
+    })
+      .then(res => {
+        return res.json()
+      })
+      .then(() => {
+        setTasks([...tasks.filter(t => t.id !== task.id)])
+      })
   }
 
   return (
@@ -62,8 +64,11 @@ export default function App() {
             <ListItem
               key={task.id}
               endAction={
-                <IconButton aria-label='Delete' size='sm' color='danger'>
-                  {/* TO-DO: Implement the delete feature */}
+                <IconButton
+                  aria-label='Delete'
+                  size='sm'
+                  color='danger'
+                  onClick={() => handleDeleteTask(task)}>
                   <Delete />
                 </IconButton>
               }>

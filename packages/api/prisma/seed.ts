@@ -25,10 +25,6 @@ const tasks: Omit<Task, 'id'>[] = [
     completed: false,
   },
   {
-    title: '[ui] This request is running twice. How to fix that?',
-    completed: false,
-  },
-  {
     title: '[ui] How to guarantee that data is an array of Task?',
     completed: false,
   },
