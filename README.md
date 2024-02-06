@@ -53,4 +53,4 @@ At any moment you can run `turbo <COMMAND>`. The available commands are:
 
 - you need to share your entire screen
 - you are allowed to ask as many questions as you'd like
-- you are allowed to
+- you are allowed to use any resource you'd normally use during regular work such as Google, StackOverflow, AI, etc
