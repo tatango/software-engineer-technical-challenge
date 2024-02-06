@@ -54,6 +54,13 @@ At any moment you can run `turbo <COMMAND>`. The available commands are:
 - `format`: formats the code with Prettier
 - `migrate`: creates and seeds the database
 
+Another useful tool is Prisma Studio:
+
+```
+// run it from `packages/api`
+npx prisma studio
+```
+
 ### Rules
 
 - you need to share your entire screen
