@@ -1,5 +1,7 @@
 # software-engineering-technical-challenge
 
+This challenge involves implementing the missing parts of a To-do list app. You can search for the `TO-DO` content in the monorepo to find your objectives.
+
 ## Challenge rules
 
 - you need to share your entire screen
