@@ -15,5 +15,17 @@
 			"label": "api"
 		}
 	},
-	"postCreateCommand": "yarn install && turbo migrate"
+	"postCreateCommand": "yarn install && turbo migrate",
+	"postAttachCommand": "turbo dev",
+	"customizations": {
+		"codespaces": {
+		  "openFiles": ["packages/ui/src/App.tsx", "packages/api/src/index.ts"]
+		},
+		"vscode": {
+		  "extensions": [
+			"dbaeumer.vscode-eslint",
+			"esbenp.prettier-vscode"
+		  ]
+		}
+	}
 }
