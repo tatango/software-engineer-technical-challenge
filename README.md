@@ -2,6 +2,18 @@
 
 This challenge involves implementing the missing parts of a To-do list app. You can search for the `TO-DO` content in the monorepo to find your objectives.
 
+## What's it about?
+
+- it's not about completing everything
+- it's about understanding how you...
+    - work
+    - communicate
+    - prioritize
+    - organize
+    - think
+    - deal with problems
+    - handle pressure
+
 ## Challenge rules
 
 - you need to share your entire screen
@@ -77,3 +89,5 @@ You can run the project locally if you don't want to use a Codespace.
 
 - You can use `npx prisma studio` from `./packages/api` to quickly inspect the database
 - You can use `postman` to interact with the `api` by using the collection located at `.packages/api/api.postman_collection.json`
+
+# Take a deep breath and just be yourself! Good luck! :-)
