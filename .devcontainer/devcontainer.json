@@ -1,0 +1,11 @@
+{
+  "forwardPorts": [1337, 1984],
+  "portsAttributes": {
+    "1337": {
+      "label": "ui"
+    },
+    "1984": {
+      "label": "api"
+    }
+  }
+}
