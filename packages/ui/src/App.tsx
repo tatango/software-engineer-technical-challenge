@@ -10,11 +10,13 @@ import Typography from '@mui/joy/Typography'
 import { Task } from '@prisma/client'
 import { Fragment, useEffect, useState } from 'react'
 
+const API_URL = process.env.API_URL
+
 export default function App() {
   const [tasks, setTasks] = useState<Task[]>([])
 
   useEffect(() => {
-    fetch('http://localhost:1984/tasks')
+    fetch(`${API_URL}/tasks`)
       .then(res => {
         return res.json()
       })
@@ -30,7 +32,7 @@ export default function App() {
   }
 
   const handleDeleteTask = (task: Task) => {
-    fetch(`http://localhost:1984/tasks/${task.id}`, {
+    fetch(`${API_URL}/tasks/${task.id}`, {
       method: 'delete',
     })
       .then(res => {
