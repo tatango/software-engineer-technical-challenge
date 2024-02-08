@@ -1,11 +1,19 @@
 {
-  "forwardPorts": [1337, 1984],
-  "portsAttributes": {
-    "1337": {
-      "label": "ui"
-    },
-    "1984": {
-      "label": "api"
-    }
-  }
+	"name": "Node.js & TypeScript",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/prettier:1": {},
+		"ghcr.io/devcontainers-contrib/features/turborepo-npm:1": {},
+		"ghcr.io/devcontainers-contrib/features/jshint:2": {}
+	},
+	"forwardPorts": [1337, 1984],
+	"portsAttributes": {
+		"1337": {
+			"label": "ui"
+		},
+		"1984": {
+			"label": "api"
+		}
+	},
+	"postCreateCommand": "yarn install && turbo migrate"
 }

@@ -11,6 +11,10 @@
     See https://turbo.build/repo/docs/installing.
     The `npm` method seems to be more consistent.
 
+Alternatively, you can use a GitHub Codespace.
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/tatango/software-engineer-technical-challenge)
+
 ## Nice to Have
 
 `Postman`, so you can use the collection to interact with the `api`.
