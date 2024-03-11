@@ -6,22 +6,22 @@
   "dependencies": {
     "@hapi/hapi": "^21.3.3",
     "@prisma/client": "5.9.1",
-    "joi": "^17.12.1"
+    "joi": "^17.12.1",
+    "prisma": "^5.9.1"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.0",
-    "@types/node": "^20.11.16",
+    "@types/node": "^20.11.25",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "eslint": "^8.55.0",
     "nodemon": "^3.0.3",
     "prettier": "^3.2.4",
-    "prisma": "^5.9.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.2"
   },
   "scripts": {
-    "dev": "nodemon -e ts  --exec \"yarn run build && node ./dist/index.js\"",
+    "dev": "nodemon",
     "build": "tsc",
     "type-check": "tsc --noEmit",
     "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0",
