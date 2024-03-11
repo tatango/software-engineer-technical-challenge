@@ -21,7 +21,7 @@ const init = async () => {
 
   /* list */
   server.route({
-    method: 'GET',
+    method: 'get',
     path: '/tasks',
     handler: async (request: Request, h: ResponseToolkit) => {
       return await prisma.task.findMany()
@@ -30,7 +30,7 @@ const init = async () => {
 
   /* delete */
   server.route({
-    method: 'DELETE',
+    method: 'delete',
     path: '/tasks/{id}',
     handler: async (request: Request, h: ResponseToolkit) => {
       return await prisma.task.delete({
@@ -41,20 +41,35 @@ const init = async () => {
 
   /* create */
   server.route({
-    method: ['POST'],
+    method: ['post'],
     path: '/tasks',
     handler: async (request: Request, h: ResponseToolkit) => {
-      // TO-DO: Implement the create task endpoint
+      /**
+       * TO-DO: Implement the create task endpoint
+       *
+       * Useful links:
+       *
+       * - https://hapi.dev/api#path-parameters
+       * - https://hapi.dev/api#-requestpayload
+       * - https://www.prisma.io/docs/orm/prisma-client/queries/crud#create
+       */
       throw new Error('Not implemented')
     },
   })
 
   /* update */
   server.route({
-    method: ['PUT', 'PATCH'],
+    method: ['put', 'patch'],
     path: '/tasks/{id}',
     handler: async (request: Request, h: ResponseToolkit) => {
-      // TO-DO: Implement the update task endpoint
+      /**
+       * TO-DO: Implement the update task endpoint
+       *
+       * Useful links:
+       *
+       * - https://hapi.dev/api#-requestpayload
+       * - https://www.prisma.io/docs/orm/prisma-client/queries/crud#update
+       */
       throw new Error('Not implemented')
     },
   })
