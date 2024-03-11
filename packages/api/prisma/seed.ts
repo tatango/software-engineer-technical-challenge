@@ -1,30 +1,14 @@
+import { faker } from '@faker-js/faker'
 import { PrismaClient, Task } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
-const tasks: Omit<Task, 'id'>[] = [
-  {
-    title: 'Implement the update task endpoint',
+const tasks: Omit<Task, 'id'>[] = Array(5)
+  .fill({})
+  .map(() => ({
+    title: faker.lorem.sentence(3),
     completed: false,
-  },
-  {
-    title: 'Persist the changes to the database',
-    completed: false,
-  },
-  {
-    title: 'Implement the create task endpoint',
-    completed: false,
-  },
-
-  {
-    title: 'Implement the new task feature',
-    completed: false,
-  },
-  {
-    title: 'How to guarantee that data is an array of Task?',
-    completed: false,
-  },
-]
+  }))
 
 async function main() {
   for (const task of tasks) {
