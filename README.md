@@ -65,7 +65,7 @@ You can run the project locally if you don't want to use a Codespace.
     See https://turbo.build/repo/docs/installing.
     The `npm` method seems to be more consistent.
 
-### Botting up the development server
+### Booting up the development server
 
 1. Install project dependencies
 
