@@ -6,13 +6,13 @@ This challenge involves implementing the missing parts of a To-do list app. You 
 
 - it's not about completing everything
 - it's about understanding how you...
-    - work
-    - communicate
-    - prioritize
-    - organize
-    - think
-    - deal with problems
-    - handle pressure
+  - work
+  - communicate
+  - prioritize
+  - organize
+  - think
+  - deal with problems
+  - handle pressure
 
 ## Challenge rules
 
@@ -58,32 +58,27 @@ You can run the project locally if you don't want to use a Codespace.
 
 1. `yarn`
 
-    See https://classic.yarnpkg.com/lang/en/docs/install.
-
-1. `turbo`
-
-    See https://turbo.build/repo/docs/installing.
-    The `npm` method seems to be more consistent.
+   See https://classic.yarnpkg.com/lang/en/docs/install.
 
 ### Booting up the development server
 
 1. Install project dependencies
 
-    ```
-    yarn
-    ```
+   ```
+   yarn
+   ```
 
-1.  Create and seed the database
+1. Create and seed the database
 
-    ```
-    turbo migrate
-    ```
+   ```
+   yarn turbo migrate
+   ```
 
 1. Start the development environment:
 
-    ```
-    turbo dev
-    ```
+   ```
+   yarn turbo dev
+   ```
 
 ## Tools and tips
 

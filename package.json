@@ -9,5 +9,11 @@
   "private": true,
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "turbo": "1"
+  },
+  "scripts": {
+    "dev": "turbo dev"
+  }
 }
