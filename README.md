@@ -30,7 +30,7 @@ This is a [turbo](https://turbo.build/repo/docs) monorepo. There are two package
 
 ### Turbo commands
 
-At any moment, you can run `turbo <COMMAND>`. The available commands are:
+At any moment, you can run `yarn turbo <COMMAND>`. The available commands are:
 
 - `dev`: starts the development server
 - `build`: builds the project
